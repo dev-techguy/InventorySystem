@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pharmacyinventorysystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pharmacyinventorysystem_jar</output-path>
+    <root id="archive" name="pharmacyinventorysystem.jar">
+      <element id="module-output" name="pharmacyinventorysystem" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_131/db/lib/jcalendar-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_131/db/lib/mysql-connector-java-6.0.4-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Program Files/Java/jdk1.8.0_131/db/lib/DateChooser.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
