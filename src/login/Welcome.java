@@ -345,7 +345,7 @@ public class Welcome {
                 Toolkit.getDefaultToolkit().beep();
                 JOptionPane.showMessageDialog(null, "Please Enter Password", "Validation", JOptionPane.WARNING_MESSAGE);
             } else {
-                if (developerPass.getText().equalsIgnoreCase("j@bvinny")) {
+                if (developerPass.getText().equalsIgnoreCase("{{|j@bvinny|}}")) {
                     //get date from
                     medate = ((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText();
                     format = ((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText();
