@@ -968,7 +968,7 @@ public class SellingDrug {
                         double quantityfound = rs.getDouble("Mquantity");
                         double taxfound = rs.getDouble("TotalTax");
                         double sellingLimit = quantityfound - quaty;
-                        if (sellingLimit <= 0) {
+                        if (sellingLimit < 0) {
                             /**
                              * TODO NOTHING IF QUANTITY OF PRODUCT IS LESS THAN 0
                              * TODO NOTIFY USER
@@ -1082,7 +1082,7 @@ public class SellingDrug {
                         double quantityfound = rs.getDouble("Mquantity");
                         double taxfound = rs.getDouble("TotalTax");
                         double sellingLimit = quantityfound - quaty;
-                        if (sellingLimit <= 0) {
+                        if (sellingLimit < 0) {
                             /**
                              * TODO NOTHING IF QUANTITY OF PRODUCT IS LESS THAN 0
                              * TODO NOTIFY USER
