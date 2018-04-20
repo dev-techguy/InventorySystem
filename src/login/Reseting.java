@@ -219,7 +219,7 @@ public class Reseting {
             String usertype = "User Reset";
             if (type3.equalsIgnoreCase(admintype)) {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     if (con != null) {
                         if (nid.equalsIgnoreCase("") && pnum.equalsIgnoreCase("") && pass1.equalsIgnoreCase("") && pass2.equalsIgnoreCase("")) {
                             JOptionPane.showMessageDialog(null, "Please Fill In The Fields", "Notification", JOptionPane.WARNING_MESSAGE);
@@ -270,7 +270,7 @@ public class Reseting {
                 }
             } else if (type3.equalsIgnoreCase(usertype)) {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     if (con != null) {
                         if (nid.equalsIgnoreCase("") && pnum.equalsIgnoreCase("") && pass1.equalsIgnoreCase("") && pass2.equalsIgnoreCase("")) {
                             JOptionPane.showMessageDialog(null, "Please Fill In The Fields", "Notification", JOptionPane.WARNING_MESSAGE);

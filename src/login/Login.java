@@ -209,7 +209,7 @@ public class Login {
 //                System.out.println(Aname + Apass);
             if (type2.equalsIgnoreCase(admin)) {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     if (con != null) {
                         if (Aname.equalsIgnoreCase("") && Apass.equalsIgnoreCase("")) {
                             JOptionPane.showMessageDialog(null, "No Username/Password given", "Notification", JOptionPane.WARNING_MESSAGE);
@@ -245,7 +245,7 @@ public class Login {
                 try {
                     String natid = tusername.getText();
                     int ID = Integer.parseInt(natid);
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     if (con != null) {
                         if (Aname.equalsIgnoreCase("") && Apass.equalsIgnoreCase("")) {
                             JOptionPane.showMessageDialog(null, "No Username/Password given", "Notification", JOptionPane.WARNING_MESSAGE);

@@ -79,7 +79,7 @@ public class AddMedicine {
     final double vat = 16.0;
 
     //database connectors
-    Connection connection;
+    Connection con;
     Statement stmt = null;
     ResultSet rs = null;
     PreparedStatement prs = null;
@@ -156,7 +156,7 @@ public class AddMedicine {
     //code for adding stockin
     private void stockin() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqladd = "INSERT INTO tablestockin(Mname,Mserial,Mtotalquantity,TotalTax,Mtotalcost) VALUES (?,?,?,?,?)";
             prs = con.prepareStatement(sqladd);
 
@@ -180,7 +180,7 @@ public class AddMedicine {
     //code for adding distributers
     private void distributers() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqladd = "INSERT INTO tabledistributers(Mserial,Dname,Mname,Mquantity,Mtotalcost,Balance,LastEdited) VALUES (?,?,?,?,?,?,?)";
             prs = con.prepareStatement(sqladd);
 
@@ -218,7 +218,7 @@ public class AddMedicine {
 
         //adding to the database
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             if (con != null) {
                 if (mname.equalsIgnoreCase("") && cost.equalsIgnoreCase("") && quantity.equalsIgnoreCase("") && ((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().isEmpty()
                         && mpres.equalsIgnoreCase("") && mdistributer.equalsIgnoreCase("") && mcategory.equalsIgnoreCase("") && mreport.equalsIgnoreCase("") && mserialnumber.equalsIgnoreCase("")) {
@@ -537,8 +537,8 @@ public class AddMedicine {
 
         badd.addActionListener(e -> {
             try {
-                connection = DBConnector.getConnection();
-                if (connection != null) {
+                con = DBConnector.getConnection();
+                if (con != null) {
                     addingtosstore();
                 } else {
                     xamppfailure.getCon();

@@ -74,7 +74,9 @@ public class Worker {
     String[] values = new String[]{"National ID", "Worker Name", "Personal Number", "Total Salary", "Amount Paid", "Balance", "Last Edited On"};
     double cost2, total, payed, total2;
     String cost, payedamount, workerfound;
+
     //database connectors
+    Connection con = null;
     Statement stmt = null;
     ResultSet rs, rs1, rs2, rs3, rs4 = null;
     PreparedStatement prs, prs2 = null;
@@ -116,7 +118,7 @@ public class Worker {
             JOptionPane.showMessageDialog(null, "No Payment Of The Worker given", "Error Message", JOptionPane.ERROR_MESSAGE, icon2);
         } else {
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 String serialgot = String.valueOf(tnid.getText());
                 String sqlqsumsuch = "SELECT * FROM userlogin WHERE NationalID  = '" + serialgot + "' UNION SELECT * FROM adminlogin WHERE NationalID  = '" + serialgot + "'";
                 prs = con.prepareStatement(sqlqsumsuch);
@@ -167,7 +169,7 @@ public class Worker {
     //method for getting all the payments,balance
     private void all() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             //adminlogin
             //getting totalcost
             String stockcostadmin = "SELECT SUM(Salary) TCOST FROM  adminlogin";
@@ -245,7 +247,7 @@ public class Worker {
     //method for getting data names from store
     public void WorkersFound() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqldrugname = "SELECT username FROM adminlogin\n"
                     + "UNION\n"
                     + "SELECT username FROM userlogin\n"
@@ -276,7 +278,7 @@ public class Worker {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord2 = "SELECT * FROM adminlogin UNION SELECT * FROM userlogin ORDER BY NationalID";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord2);
             if (rs.next()) {
@@ -344,7 +346,7 @@ public class Worker {
                 int selloption = JOptionPane.showOptionDialog(null, "Are you sure you want add" + " " + tusernameadd.getText() + " " + "as" + " " + addtype, "New Worker Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconMembers, option, option[1]);
                 if (selloption == 0) {
                     if (admin.equalsIgnoreCase(addtype)) {
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         //adding to userlogin
                         String sqladd10 = "INSERT INTO adminlogin(NationalID,username,personalnumber,Salary,Balance,LastEdited) VALUES (?,?,?,?,?,?)";
                         prs2 = con.prepareStatement(sqladd10);
@@ -389,7 +391,7 @@ public class Worker {
                         }
 
                     } else if (user.equalsIgnoreCase(addtype)) {
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         //adding to userlogin
                         String sqladd50 = "INSERT INTO userlogin(NationalID,username,personalnumber,Salary,Balance,LastEdited) VALUES (?,?,?,?,?,?)";
                         prs2 = con.prepareStatement(sqladd50);
@@ -454,7 +456,7 @@ public class Worker {
             pharmacymodel.setColumnIdentifiers(values);
             String fetchrecord = "SELECT * FROM userlogin WHERE NationalID = '" + serialgot + "' || username  = '" + tsearch.getText() + "' || personalnumber = '" + tsearch.getText() + "' UNION SELECT * FROM adminlogin WHERE NationalID = '" + serialgot + "' || username  = '" + tsearch.getText() + "' || personalnumber = '" + tsearch.getText() + "'";
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecord);
                 if (rs.next()) {
@@ -521,7 +523,7 @@ public class Worker {
                 if (valuesalry.equalsIgnoreCase(null) && tpay.getText().equalsIgnoreCase(null)) {
                     JOptionPane.showMessageDialog(null, "Please Enter Salary And Amount To Pay" + " " + tusername.getText(), "Payment Message", JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String[] option = {"Yes", "No"};
                     int selloption = JOptionPane.showOptionDialog(null, "Proceed in Paying" + " " + tusername.getText() + " " + "Details with National_ID" + " " + serialgot, "Payment Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconMembers, option, option[1]);
                     if (selloption == 0) {
@@ -614,7 +616,6 @@ public class Worker {
         boxdeletemember.addActionListener(event -> {
             JComboBox<String> ltype = (JComboBox<String>) event.getSource();
             workergot = (String) ltype.getSelectedItem();
-            Connection con = null;
             try {
                 con = DBConnector.getConnection();
                 String workername = "SELECT * FROM adminlogin WHERE username = '" + workergot + "'";
@@ -1050,7 +1051,7 @@ public class Worker {
                 if (valuesearch.equalsIgnoreCase("") || valuesearch.equalsIgnoreCase(null)) {
                     JOptionPane.showMessageDialog(null, "Please Enter ID For Admin/User", "Deletion Message", JOptionPane.INFORMATION_MESSAGE, iconMembers);
                 } else {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String[] option = {"Yes", "No"};
                     int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting " + workergot + " Details with National_ID " + " " + serialgot, "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconMembers, option, option[1]);
                     if (selloption == 0) {
@@ -1104,7 +1105,7 @@ public class Worker {
                 if (valuesearch.equalsIgnoreCase("") || valuesearch.equalsIgnoreCase(null)) {
                     JOptionPane.showMessageDialog(null, "Please Select The Worker From The Table To Delete", "Deletion Message", JOptionPane.INFORMATION_MESSAGE, iconMembers);
                 } else {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String[] option = {"Yes", "No"};
                     int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting" + " " + tusername.getText() + " " + "Details with National_ID" + " " + serialgot, "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconMembers, option, option[1]);
                     if (selloption == 0) {

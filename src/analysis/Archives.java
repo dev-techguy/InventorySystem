@@ -19,7 +19,7 @@ import javax.swing.text.JTextComponent;
 public class Archives {
 
     //dimension setting
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     //getting images
     URL url1 = Main.class.getResource("/img/logo.png");
@@ -138,7 +138,7 @@ public class Archives {
         String fetchTextrecord = "SELECT * FROM paymentrecords WHERE Cname = '" + tsearch2.getText() + "' || CIdentity = '" + tsearch2.getText() + "' || Dpayed = '" + paidDate + "' ORDER BY ID DESC";
         String fetchrecordDate = "SELECT * FROM paymentrecords WHERE (Cname = '" + tsearch2.getText() + "' || CIdentity = '" + tsearch2.getText() + "') && (Dpayed = '" + paidDate + "') ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             if ((!((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().isEmpty() && !tsearch2.getText().equalsIgnoreCase("")) && (((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().equalsIgnoreCase(paidDate) && tsearch2.getText().equalsIgnoreCase(tsearch2.getText()))) {
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecordDate);
@@ -221,7 +221,7 @@ public class Archives {
         pharmacymodel.setColumnIdentifiers(values2);
         String fetchrecord = "SELECT * FROM paymentrecords ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -271,7 +271,7 @@ public class Archives {
 
         //code for fetching all the sum of stock in paymentrecords
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlqsumall = "SELECT SUM(Tcost) STOREQ FROM paymentrecords";
             prs = con.prepareStatement(sqlqsumall);
             rs = prs.executeQuery();
@@ -292,7 +292,7 @@ public class Archives {
 
         //code for fetching all the sum of cost in paymentrecords
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlcsumall2 = "SELECT SUM(Payed) STORETC FROM paymentrecords";
             prs = con.prepareStatement(sqlcsumall2);
             rs2 = prs.executeQuery();
@@ -313,7 +313,7 @@ public class Archives {
 
         //code for fetching all the sum of cost in paymentrecords
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlcsumall3 = "SELECT SUM(Balance) STORETCX FROM paymentrecords";
             prs = con.prepareStatement(sqlcsumall3);
             rs3 = prs.executeQuery();
@@ -344,7 +344,7 @@ public class Archives {
             pharmacymodel.setColumnIdentifiers(values);
             String fetchrecord = "SELECT * FROM pastrecords WHERE Mserial = '" + tsearch.getText() + "' || Mname = '" + tsearch.getText() + "' ORDER BY ID DESC";
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecord);
                 if (rs.next()) {
@@ -402,7 +402,7 @@ public class Archives {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM pastrecords ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -763,7 +763,7 @@ public class Archives {
                 } else {
                     if (serialgot.equalsIgnoreCase("all")) {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting Will Delete The Entire Stock" + " \n" + "This should only be done if the Entire Stock records is no of use", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[1]);
                         if (selloption == 0) {
@@ -795,7 +795,7 @@ public class Archives {
                         }
                     } else {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceeding in Deleting Will Delete The Entire Stock Of The Item" + " " + tadvanced.getText() + " " + "Details with Serial_Number" + "\n" + "This should only be done if the stock record is no of use", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[1]);
                         if (selloption == 0) {
@@ -840,7 +840,7 @@ public class Archives {
                 } else {
                     if (serialgot.equalsIgnoreCase("all")) {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceeding in Deleting Will Delete The Entire Payment Records" + " \n" + "This should only be done if the Payment Records are no of use", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[1]);
                         if (selloption == 0) {
@@ -872,7 +872,7 @@ public class Archives {
                         }
                     } else {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting Will Delete The Entire Payment Of The Item" + " " + tadvanced.getText() + "\n" + "This should only be done if the payment record is no of use", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[1]);
                         if (selloption == 0) {

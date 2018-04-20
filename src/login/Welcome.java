@@ -75,7 +75,7 @@ public class Welcome {
     //check on starting status of xampp
     private void stateXampp() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             if (con != null) {
                 //do nothing
                 System.out.println("do nothing");
@@ -223,11 +223,11 @@ public class Welcome {
             if (numWelcome == 1425) {
                 try {
                     try {
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                     } catch (SQLException e) {
                         startdb.startXampp();
                         try {
-                            Connection con = DBConnector.getConnection();
+                            con = DBConnector.getConnection();
                         } catch (SQLException ee) {
                             startdb.startXampp();
                             stateXampp();
@@ -246,7 +246,7 @@ public class Welcome {
             }
             if (numWelcome == 2090) {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     if (con != null) {
                         Floadingbar.setVisible(false);
                         Login r2 = new Login();
@@ -471,7 +471,7 @@ public class Welcome {
      */
     private void validateUI() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sqldatereached = "SELECT * FROM systemtimer WHERE ID = 1";
             rs = stmt.executeQuery(sqldatereached);

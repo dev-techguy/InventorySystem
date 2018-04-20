@@ -86,6 +86,7 @@ public class SellingDrug {
     JFrame Fprint = new JFrame();
 
     //database connectors
+    Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
     PreparedStatement prs = null;
@@ -209,7 +210,7 @@ public class SellingDrug {
             //JOptionPane.showMessageDialog(null, "No Cost or Quantity given", "Error Message", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 String sqlqsum = "SELECT TaxType,Mquantity FROM store WHERE Mname = '" + drugname + "' || Mname = '" + tsearch.getText() + "'|| Mserial = '" + tsearch.getText() + "' || Mserial = '" + tsearchtable.getText() + "' ";
                 prs = con.prepareStatement(sqlqsum);
                 rs = prs.executeQuery();
@@ -484,7 +485,7 @@ public class SellingDrug {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM store WHERE Mname = '" + tsearch.getText() + "' || Mserial = '" + tsearch.getText() + "' ";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -531,7 +532,7 @@ public class SellingDrug {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM store WHERE Mname = '" + drugname + "'";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -573,7 +574,7 @@ public class SellingDrug {
     //method for getting data names from store
     public void DrugNameFound() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqldrugname = "SELECT * FROM store ORDER BY ID DESC";
             prs = con.prepareStatement(sqldrugname);
             rs = prs.executeQuery();
@@ -597,7 +598,7 @@ public class SellingDrug {
     //for user
     public void DrugNameFoundUser() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqldrugname = "SELECT * FROM store ORDER BY ID DESC";
             prs = con.prepareStatement(sqldrugname);
             rs = prs.executeQuery();
@@ -621,7 +622,7 @@ public class SellingDrug {
     //method for searchfromtable
     private void searchFromTable() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             //String sql = "SELECT Mname,Msection,Mprescription,Mcost FROM store WHERE Mname = '" + tsearch.getText() + "' ";
             String sqldatereached = "SELECT Medate FROM store WHERE Mname = '" + tsearchtable.getText() + "' || Mserial = '" + tsearchtable.getText() + "'";
@@ -710,7 +711,7 @@ public class SellingDrug {
             JOptionPane.showMessageDialog(null, "Please Give The Name/Serial_NO Of The Product For Search To Sell", "Sell Message", JOptionPane.INFORMATION_MESSAGE, icon);
         } else {
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 //String sql = "SELECT Mname,Msection,Mprescription,Mcost FROM store WHERE Mname = '" + tsearch.getText() + "' ";
                 String sqldatereached = "SELECT Medate FROM store WHERE Mname = '" + tsearch.getText() + "' || Mserial = '" + tsearch.getText() + "'";
@@ -801,7 +802,7 @@ public class SellingDrug {
     private void searchstore() {
         //String searchingvalue = tsearch.getText();
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             if (con != null) {
                 if (drugname.equalsIgnoreCase("Choose Product From The Store To Sell")) {
                     Toolkit.getDefaultToolkit().beep();
@@ -901,7 +902,7 @@ public class SellingDrug {
     private void saveSells(String serialCode) {
         try {
             //code for adding sold items to tablesell
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqladd = "INSERT INTO tablesell(Mname,Mserial,Bcost,Mcost,TotalTax,Mtotalquantity,Tamount,Mtotalcost,CashPaid,ChangePaid,Msolddate,LastEdited,Invoice) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
             prs = con.prepareStatement(sqladd);
 
@@ -958,7 +959,7 @@ public class SellingDrug {
                 JOptionPane.showMessageDialog(null, "Product Cost Amount Missing", "Cost Message", JOptionPane.WARNING_MESSAGE);
             } else {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String sqlcsum = "SELECT Mserial,Mquantity,TotalTax,Mtotalcost FROM store WHERE Mname = '" + drugname + "' || Mname = '" + tsearch.getText() + "'|| Mserial = '" + tsearch.getText() + "'|| Mserial = '" + tsearchtable.getText() + "'";
                     prs = con.prepareStatement(sqlcsum);
                     rs = prs.executeQuery();
@@ -1072,7 +1073,7 @@ public class SellingDrug {
                 JOptionPane.showMessageDialog(null, "Product Cost Amount Missing", "Cost Message", JOptionPane.WARNING_MESSAGE);
             } else {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String sqlcsum = "SELECT Mserial,Mquantity,TotalTax,Mtotalcost FROM store WHERE Mname = '" + drugname + "' || Mname = '" + tsearch.getText() + "'|| Mserial = '" + tsearch.getText() + "'|| Mserial = '" + tsearchtable.getText() + "'";
                     prs = con.prepareStatement(sqlcsum);
                     rs = prs.executeQuery();
@@ -1176,7 +1177,7 @@ public class SellingDrug {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM store ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {

@@ -158,7 +158,7 @@ public class StockAnalysis extends Component {
 
         //get database connection
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             //set a counter
             int productNumber = 1;
             int i = 1;
@@ -342,7 +342,7 @@ public class StockAnalysis extends Component {
     //method for loading and analyzing all data for the whole stock
     private void storeanalyzer() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String stocksql = "SELECT SUM(Mtotalquantity) STORESTOCK FROM  tablestockin";
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(stocksql);
@@ -461,7 +461,7 @@ public class StockAnalysis extends Component {
             pharmacymodel.setColumnIdentifiers(values);
             String fetchrecord = "SELECT * FROM tablecritical WHERE Mserial = '" + tsearch.getText() + "' || Mname = '" + tsearch.getText() + "' ORDER BY ID DESC";
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecord);
                 if (rs.next()) {
@@ -527,7 +527,7 @@ public class StockAnalysis extends Component {
     //metod for analysing data and analyzing data for a single stock
     public void analyzingdata() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String fetchserial = "SELECT * FROM  tablestockin";
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchserial);
@@ -672,7 +672,7 @@ public class StockAnalysis extends Component {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM tablecritical ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -1162,7 +1162,7 @@ public class StockAnalysis extends Component {
                 } else {
                     if (serialgot.equalsIgnoreCase("all")) {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceeding in Deleting Will Delete The Entire Stock" + " \n" + "This should only be done if the stock is never needed" + "\n\n" + "If deleted no saving will be done to the archives", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconstock, option, option[1]);
                         if (selloption == 0) {
@@ -1205,7 +1205,7 @@ public class StockAnalysis extends Component {
                         }
                     } else {
 
-                        Connection con = DBConnector.getConnection();
+                        con = DBConnector.getConnection();
                         String[] option = {"Yes", "No"};
                         int selloption = JOptionPane.showOptionDialog(null, "Proceeding in Deleting Will Delete The Entire Stock Of The Item" + " " + tname.getText() + " " + "Details with Serial_Number" + " " + serialgot + "\n" + "This should only be done if the product's stock is over" + "\n\n" + "If Deleted The Product Analysis Details Will Be Saved To The Archive \nAnd Product sold sales will be saved in the Past sold records store\nFor Future Reference.", "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconstock, option, option[1]);
                         if (selloption == 0) {

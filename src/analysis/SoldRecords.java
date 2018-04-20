@@ -116,7 +116,7 @@ public class SoldRecords {
     private void receiveSearchData(String searchDate, String searchDetails) {
         try {
             //Database Connection
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlqsum1 = null;
             if (((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().isEmpty() && tsearch.getText().equalsIgnoreCase(searchDetails) && !tsearch.getText().equalsIgnoreCase("")) {
                 //sql for getting sum sold for the item search
@@ -175,7 +175,7 @@ public class SoldRecords {
         String fetchrecordOne = "SELECT * FROM pastsoldrecords WHERE Mname  = '" + tsearch.getText() + "' || Mserial  = '" + tsearch.getText() + "' || Msolddate  = '" + soldDate + "' || Invoice ='" + tsearch.getText() + "' ORDER BY ID DESC ";
         String fetchrecordTwo = "SELECT * FROM pastsoldrecords WHERE (Mname = '" + tsearch.getText() + "' || Mserial = '" + tsearch.getText() + "' || Invoice ='" + tsearch.getText() + "') && (Msolddate  = '" + soldDate + "') ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             if ((!((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().isEmpty() && !tsearch.getText().equalsIgnoreCase("")) && (((JTextComponent) dateexpry.getDateEditor().getUiComponent()).getText().equalsIgnoreCase(soldDate) && tsearch.getText().equalsIgnoreCase(tsearch.getText()))) {
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecordTwo);
@@ -268,7 +268,7 @@ public class SoldRecords {
         pharmacymodel.setColumnIdentifiers(values2);
         String fetchrecord = "SELECT * FROM pastsoldrecords ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -330,7 +330,7 @@ public class SoldRecords {
 
         //code for fetching all the sum of stock in paymentrecords
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlqsumall = "SELECT SUM(Mtotalquantity) STOREQ FROM pastsoldrecords";
             prs = con.prepareStatement(sqlqsumall);
             rs = prs.executeQuery();
@@ -351,7 +351,7 @@ public class SoldRecords {
 
         //code for fetching all the sum of cost in paymentrecords
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlcsumall2 = "SELECT SUM(Tamount) STORETC FROM pastsoldrecords";
             prs = con.prepareStatement(sqlcsumall2);
             rs2 = prs.executeQuery();

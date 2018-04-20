@@ -16,6 +16,7 @@ import java.util.Date;
 public class DBConnector extends Component {
 
     String path = null;
+    Connection connection = null;
 
     URL urlbackup = Main.class.getResource("/BackUpFile/BackUp.bat");
     URL urlxamppstart = Main.class.getResource("/BackUpFile/Start.bat");
@@ -34,6 +35,7 @@ public class DBConnector extends Component {
     private static final String dbname = "dbpharmacy";
     private static final String USERNAME = "TechGuy";
     private static final String PASSWORD = "jobvinny";
+//    private static final String CONN = "jdbc:mysql://127.0.0.1:3306/dbpharmacy?autoReconnect=true&useSSL=false";
     private static final String CONN = "jdbc:mysql://127.0.0.1:3306/dbpharmacy";
     private static final String SQCONN = "jdbc:sqlite:dbpharmacy.sqlite";
 
@@ -45,7 +47,7 @@ public class DBConnector extends Component {
     //method for backup of data
     public void getBackup() {
         try {
-            Connection connection = getConnection();
+            connection = getConnection();
             if (connection != null) {
 //                BufferedWriter fileOut;
                 JFileChooser fc = new JFileChooser();
@@ -142,13 +144,13 @@ public class DBConnector extends Component {
     }
 
     //restart xampp
-    public void restartXampp() {
+    private void restartXampp() {
         try {
            // Process runtimeprocess = Runtime.getRuntime().exec("cmd.exe " + "/c" + " start /B " + urlxamppstart);
             Process runtimeprocess = Runtime.getRuntime().exec("C:/xampp/xampp_start.exe");
             int processcomplete = runtimeprocess.waitFor();
             if (processcomplete == 0) {
-                Connection connection = getConnection();
+                 connection = getConnection();
                 if (connection != null) {
                     Toolkit.getDefaultToolkit().beep();
                     JOptionPane.showMessageDialog(null, "Database Connection Established", "Database Status", JOptionPane.INFORMATION_MESSAGE, iconcon);

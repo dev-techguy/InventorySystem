@@ -62,6 +62,7 @@ public class MedicineStore {
     JFrame Fstore = new JFrame();
 
     //database connectors
+    Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
     PreparedStatement prs = null;
@@ -116,7 +117,7 @@ public class MedicineStore {
         tstock.setEditable(false);
 
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             //String sql = "SELECT Mname,Msection,Mprescription,Mcost FROM store WHERE Mname = '" + tsearch.getText() + "' ";
             String sqldatereached = "SELECT Medate,Mquantity FROM store WHERE Mserial = '" + tserialnumber.getText() + "' || Mserial = '" + tstoresearch.getText() + "' ";
@@ -216,7 +217,7 @@ public class MedicineStore {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM store ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -281,7 +282,7 @@ public class MedicineStore {
 
         //code for fetching all the sum of stock in store
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlqsum = "SELECT SUM(Mquantity) STOREQ FROM store";
             prs = con.prepareStatement(sqlqsum);
             rs = prs.executeQuery();
@@ -300,7 +301,7 @@ public class MedicineStore {
 
         //code for fetching all the sum of cost in store
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqlcsum = "SELECT SUM(Mtotalcost) STORETC FROM store";
             prs = con.prepareStatement(sqlcsum);
             rs = prs.executeQuery();
@@ -319,7 +320,7 @@ public class MedicineStore {
 
         //code for fetching all the sum of tax in store
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String sqltax = "SELECT SUM(TotalTax) STORETAX FROM store";
             prs = con.prepareStatement(sqltax);
             rs = prs.executeQuery();
@@ -694,7 +695,7 @@ public class MedicineStore {
                 pharmacymodel.setColumnIdentifiers(values);
                 String fetchrecord = "SELECT * FROM store WHERE Mserial = '" + storesearch + "' || Mname = '" + storesearch + "' || Msection = '" + storesearch + "' || Mdistributer = '" + storesearch + "' || Mcategory = '" + storesearch + "' ORDER BY ID DESC";
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                     rs = stmt.executeQuery(fetchrecord);
                     if (rs.next()) {
@@ -764,7 +765,7 @@ public class MedicineStore {
 
                 //code for fetching all the sum of stock in store
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String sqlqsum = "SELECT SUM(Mquantity) STOREQ FROM store WHERE  Mserial = '" + storesearch + "' || Mname = '" + storesearch + "' || Msection = '" + storesearch + "' || Mdistributer = '" + storesearch + "' || Mcategory = '" + storesearch + "'";
                     prs = con.prepareStatement(sqlqsum);
                     rs = prs.executeQuery();
@@ -783,7 +784,7 @@ public class MedicineStore {
 
                 //code for fetching all the sum of cost in store
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String sqlcsum = "SELECT SUM(Mtotalcost) STORETC FROM store WHERE  Mserial = '" + storesearch + "' || Mname = '" + storesearch + "' || Msection = '" + storesearch + "' || Mdistributer = '" + storesearch + "' || Mcategory = '" + storesearch + "'";
                     prs = con.prepareStatement(sqlcsum);
                     rs = prs.executeQuery();
@@ -829,7 +830,7 @@ public class MedicineStore {
                 JOptionPane.showMessageDialog(null, "Please Select The Product From The Table To Update", "Notification", JOptionPane.INFORMATION_MESSAGE, iconStore);
             } else {
                 try {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String sqlupdate = "UPDATE store set Mname = '" + storename + "', Mquantity = '" + productQuantity + "', BuyingPrice = '" + buyinPrice + "'"
                             + ",Mcost = '" + newPrice + "',Mtotalcost = '" + storePrice + "',Medate = '" + storedate + "' "
                             + ",Msection = '" + storesection + "',Mprescription = '" + storeprescription + "',Mdistributer = '" + storedistributer + "' "
@@ -895,7 +896,7 @@ public class MedicineStore {
                         && storeprescription.equalsIgnoreCase("") && storesection.equalsIgnoreCase("") && storereport.equalsIgnoreCase("")) {
                     JOptionPane.showMessageDialog(null, "Please Select The Product From The Table To Delete", "Error Message", JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String[] option = {"Yes", "No"};
                     int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting" + " " + storename + " " + "Details with Serial_Number" + " " + storeserial, "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[1]);
                     if (selloption == 0) {

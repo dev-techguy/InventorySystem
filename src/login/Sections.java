@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Sections {
 
@@ -104,7 +105,9 @@ public class Sections {
     LocalDateTime now = LocalDateTime.now();
     String fileeditedlast = dtf.format(now);
     String fileeditedlast2 = dtf2.format(now);
-    String expiryDate;
+    private String expiryDate;
+    private long ConvertdaysRemaining;
+    private long daysRemaining;
 
     //database connectors
     Connection con = null;
@@ -127,6 +130,9 @@ public class Sections {
             if (rs.next()) {
                 java.util.Date fetcheddate = rs.getDate("Timer");
                 expiryDate = rs.getString("SystemLimit");
+                daysRemaining = fetcheddate.getTime() - today.getTime();
+                ConvertdaysRemaining = TimeUnit.DAYS.convert(daysRemaining, TimeUnit.MILLISECONDS);
+                //System.out.println(TimeUnit.DAYS.convert(daysRemaining, TimeUnit.MILLISECONDS));
                 /**
                  * Check for date expiry license
                  * */
@@ -435,7 +441,7 @@ public class Sections {
                     + "For more Information On how to operate the system Watch" + "\n"
                     + "the Tutorial In Our Youtube Channel" + "\n" + "\b"
                     + "Click the links below\n\n"
-                    + "[ System License Expires on ~~:::~~ " + expiryDate + " ]", "About System", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconLogo, reachus, reachus[1]);
+                    + "[ System License Expires on ~~:::~~ " + expiryDate + " ]\n[ " + ConvertdaysRemaining + " Days Remaining ]", "About System", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconLogo, reachus, reachus[1]);
             if (getus == 0) {
                 ImageIcon newp = new ImageIcon(urlphone);
                 JOptionPane.showMessageDialog(null, "SOFTWARE DEVELOPER IN TECKSOLKE" + "\n" + "Name:TechGuy" + "\n"

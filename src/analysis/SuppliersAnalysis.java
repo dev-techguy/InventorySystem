@@ -61,7 +61,8 @@ public class SuppliersAnalysis {
     String[] values = new String[]{"Serial Number", "Company Name", "Product Name", "Total Stock", "Cost", "Amount Paid", "Balance", "Last Edited On"};
     double cost2, total, payed, total2;
     String cost, payedamount;
-    //database connectors
+    //database connector
+    Connection con = null;
     Statement stmt = null;
     ResultSet rs, rs1, rs2, rs3, rs4 = null;
     PreparedStatement prs, prs2 = null;
@@ -122,7 +123,7 @@ public class SuppliersAnalysis {
             //JOptionPane.showMessageDialog(null, "No Cost or Quantity given", "Error Message", JOptionPane.ERROR_MESSAGE);
         } else {
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 String sqlqsum = "SELECT * FROM tabledistributers WHERE Mserial  = '" + tserial.getText() + "'";
                 prs = con.prepareStatement(sqlqsum);
                 rs = prs.executeQuery();
@@ -152,7 +153,7 @@ public class SuppliersAnalysis {
     //method for getting all the payments,balance
     private void all() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
 
             //getting totalcost
             String stockcost = "SELECT SUM(Mtotalcost) TCOST FROM  tabledistributers";
@@ -199,7 +200,7 @@ public class SuppliersAnalysis {
             pharmacymodel.setColumnIdentifiers(values);
             String fetchrecord = "SELECT * FROM tabledistributers WHERE Mserial = '" + tsearch.getText() + "' || Mname = '" + tsearch.getText() + "' || Dname = '" + tsearch.getText() + "' ORDER BY ID DESC";
             try {
-                Connection con = DBConnector.getConnection();
+                con = DBConnector.getConnection();
                 stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rs = stmt.executeQuery(fetchrecord);
                 if (rs.next()) {
@@ -260,7 +261,7 @@ public class SuppliersAnalysis {
         pharmacymodel.setColumnIdentifiers(values);
         String fetchrecord = "SELECT * FROM tabledistributers ORDER BY ID DESC";
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(fetchrecord);
             if (rs.next()) {
@@ -322,7 +323,7 @@ public class SuppliersAnalysis {
     //method for payments
     private void supplierpayments() {
         try {
-            Connection con = DBConnector.getConnection();
+            con = DBConnector.getConnection();
             String serialgot = tserial.getText();
             if (serialgot.equalsIgnoreCase("") || serialgot.equalsIgnoreCase(null)) {
                 JOptionPane.showMessageDialog(null, "Please Select The Supplier From The Table To Pay", "Payment Message", JOptionPane.INFORMATION_MESSAGE);
@@ -701,7 +702,7 @@ public class SuppliersAnalysis {
                 if (serialgot.equalsIgnoreCase("")) {
                     JOptionPane.showMessageDialog(null, "Please Select The Supplier From The Table To Delete", "Deletion Message", JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    Connection con = DBConnector.getConnection();
+                    con = DBConnector.getConnection();
                     String[] option = {"Yes", "No"};
                     int selloption = JOptionPane.showOptionDialog(null, "Proceed in Deleting" + " " + tdname.getText() + " " + "Details with Serial_Number" + " " + serialgot, "Deletion Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, iconPayments, option, option[1]);
                     if (selloption == 0) {
