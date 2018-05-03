@@ -34,51 +34,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Archives.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/analysis/Archives.java">
+      <file leaf-file-name="Welcome.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/login/Welcome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="874" column="25" lean-forward="false" selection-start-line="874" selection-start-column="25" selection-end-line="874" selection-end-column="25" />
+            <state relative-caret-position="353">
+              <caret line="539" column="7" lean-forward="true" selection-start-line="539" selection-start-column="7" selection-end-line="539" selection-end-column="7" />
               <folding>
-                <marker date="1524214732619" expanded="true" signature="3795:3975" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="4407:4536" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="5057:5192" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="5057:5211" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="5057:5238" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="5057:5254" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="5057:5274" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="6550:6713" ph="SELECT * FRO... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="6750:6917" ph="SELECT * FRO... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="11367:11412" ph="SELECT * FRO... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="13585:13629" ph="SELECT SUM(T... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="14413:14458" ph="SELECT SUM(P... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="15269:15317" ph="SELECT SUM(B... paymentrecords" />
-                <marker date="1524214732619" expanded="true" signature="16548:16673" ph="SELECT * FRO... pastrecords" />
-                <marker date="1524214732619" expanded="true" signature="19654:19696" ph="SELECT * FRO... pastrecords" />
-                <marker date="1524214732619" expanded="true" signature="35795:35818" ph="DELETE FROM pastrecords... " />
-                <marker date="1524214732619" expanded="true" signature="37801:37870" ph="DELETE FROM pastrecords... " />
-                <marker date="1524214732619" expanded="true" signature="40321:40347" ph="DELETE FROM paymentrecords... " />
-                <marker date="1524214732619" expanded="true" signature="42297:42414" ph="DELETE FROM paymentrecords... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoldRecords.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/analysis/SoldRecords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <marker date="1524214731994" expanded="true" signature="3248:3309" ph="DELETE FROM pastsoldrecords... " />
-                <marker date="1524214731994" expanded="true" signature="4707:4893" ph="SELECT SUM(M... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="5486:5601" ph="SELECT SUM(M... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="6251:6478" ph="SELECT SUM(M... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="7693:7899" ph="SELECT * FRO... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="7936:8144" ph="SELECT * FRO... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="13442:13488" ph="SELECT * FRO... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="16463:16517" ph="SELECT SUM(M... pastsoldrecords" />
-                <marker date="1524214731994" expanded="true" signature="17301:17349" ph="SELECT SUM(T... pastsoldrecords" />
+                <marker date="1525361079265" expanded="true" signature="16490:16558" ph="INSERT INTO systemtimer... " />
+                <marker date="1525361079265" expanded="true" signature="16811:16940" ph="UPDATE systemtimer... " />
+                <marker date="1525361079265" expanded="true" signature="17557:17582" ph="SELECT Medat... storeWHERE" />
+                <marker date="1525361079265" expanded="true" signature="17557:17595" ph="SELECT * FRO... systemtimer" />
               </folding>
             </state>
           </provider>
@@ -87,62 +52,52 @@
       <file leaf-file-name="StockAnalysis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/analysis/StockAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="14" />
+            <state relative-caret-position="-12849">
+              <caret line="132" column="79" lean-forward="false" selection-start-line="132" selection-start-column="79" selection-end-line="132" selection-end-column="79" />
               <folding>
-                <marker date="1524214731963" expanded="true" signature="3880:3943" ph="SELECT * FRO... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="4186:4367" ph="INSERT INTO pastsoldrecords... " />
-                <marker date="1524214731963" expanded="true" signature="7775:7802" ph="SELECT * FRO... tablecritical" />
-                <marker date="1524214731963" expanded="true" signature="14458:14514" ph="SELECT SUM(M... tablestockin" />
-                <marker date="1524214731963" expanded="true" signature="14839:14895" ph="SELECT SUM(M... tablestockin" />
-                <marker date="1524214731963" expanded="true" signature="15171:15224" ph="SELECT SUM(M... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="15566:15614" ph="SELECT SUM(M... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="15977:16026" ph="SELECT SUM(P... tabledistributers" />
-                <marker date="1524214731963" expanded="true" signature="16314:16355" ph="SELECT SUM(P... userlogin" />
-                <marker date="1524214731963" expanded="true" signature="16645:16689" ph="SELECT SUM(P... adminlogin" />
-                <marker date="1524214731963" expanded="true" signature="16968:17012" ph="SELECT SUM(T... tablestockin" />
-                <marker date="1524214731963" expanded="true" signature="17277:17319" ph="SELECT SUM(T... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="19970:20097" ph="SELECT * FRO... tablecritical" />
-                <marker date="1524214731963" expanded="true" signature="23771:23798" ph="SELECT * FRO... tablestockin" />
-                <marker date="1524214731963" expanded="true" signature="24599:24690" ph="SELECT SUM(M... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="25006:25091" ph="SELECT SUM(T... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="25440:25526" ph="SELECT SUM(M... tablesell" />
-                <marker date="1524214731963" expanded="true" signature="26195:26266" ph="SELECT Mseri... tablecritical" />
-                <marker date="1524214731963" expanded="true" signature="26580:26816" ph="UPDATE tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="27077:27312" ph="UPDATE tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="27624:27856" ph="UPDATE tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="28117:28350" ph="UPDATE tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="28634:28795" ph="INSERT INTO tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="31579:31623" ph="SELECT * FRO... tablecritical" />
-                <marker date="1524214731963" expanded="true" signature="51894:51911" ph="DELETE FROM store... " />
-                <marker date="1524214731963" expanded="true" signature="51963:51988" ph="DELETE FROM tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="52040:52061" ph="DELETE FROM tablesell... " />
-                <marker date="1524214731963" expanded="true" signature="52113:52137" ph="DELETE FROM tablestockin... " />
-                <marker date="1524214731963" expanded="true" signature="55104:55167" ph="DELETE FROM store... " />
-                <marker date="1524214731963" expanded="true" signature="55219:55290" ph="DELETE FROM tablecritical... " />
-                <marker date="1524214731963" expanded="true" signature="55342:55409" ph="DELETE FROM tablesell... " />
-                <marker date="1524214731963" expanded="true" signature="55461:55531" ph="DELETE FROM tablestockin... " />
-                <marker date="1524214731963" expanded="true" signature="56186:56333" ph="INSERT INTO pastrecords... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuppliersAnalysis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/analysis/SuppliersAnalysis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-              <folding>
-                <marker date="1524214732057" expanded="true" signature="5110:5186" ph="SELECT * FRO... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="6564:6616" ph="SELECT SUM(M... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="6923:6968" ph="SELECT SUM(P... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="7270:7317" ph="SELECT SUM(B... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="8380:8550" ph="SELECT * FRO... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="11553:11601" ph="SELECT * FRO... tabledistributers" />
-                <marker date="1524214732057" expanded="true" signature="14927:15088" ph="UPDATE tabledistributers... " />
-                <marker date="1524214732057" expanded="true" signature="15328:15432" ph="INSERT INTO paymentrecords... " />
-                <marker date="1524214732057" expanded="true" signature="30237:30310" ph="DELETE FROM tabledistributers... " />
+                <element signature="method#anaylzeData#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#reAnalyzeData#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#setFieldsEmpty#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#setNull#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#tablecont#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#storeanalyzer#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#searchengine#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#analyzingdata#0;class#StockAnalysis#0" expanded="false" />
+                <element signature="method#uplaod#0;class#StockAnalysis#0" expanded="false" />
+                <marker date="1525360183486" expanded="true" signature="3880:3947" ph="SELECT * FRO... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="3985:4048" ph="SELECT * FRO... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="4388:4569" ph="INSERT INTO pastsoldrecords... " />
+                <marker date="1525360183486" expanded="true" signature="8211:8238" ph="SELECT * FRO... tablecritical" />
+                <marker date="1525360183486" expanded="true" signature="14894:14950" ph="SELECT SUM(M... tablestockin" />
+                <marker date="1525360183486" expanded="true" signature="15275:15331" ph="SELECT SUM(M... tablestockin" />
+                <marker date="1525360183486" expanded="true" signature="15607:15660" ph="SELECT SUM(M... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="16002:16050" ph="SELECT SUM(M... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="16413:16462" ph="SELECT SUM(P... tabledistributers" />
+                <marker date="1525360183486" expanded="true" signature="16750:16791" ph="SELECT SUM(P... userlogin" />
+                <marker date="1525360183486" expanded="true" signature="17081:17125" ph="SELECT SUM(P... adminlogin" />
+                <marker date="1525360183486" expanded="true" signature="17404:17448" ph="SELECT SUM(T... tablestockin" />
+                <marker date="1525360183486" expanded="true" signature="17713:17755" ph="SELECT SUM(T... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="20406:20533" ph="SELECT * FRO... tablecritical" />
+                <marker date="1525360183486" expanded="true" signature="24208:24235" ph="SELECT * FRO... tablestockin" />
+                <marker date="1525360183486" expanded="true" signature="25036:25127" ph="SELECT SUM(M... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="25443:25528" ph="SELECT SUM(T... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="25877:25963" ph="SELECT SUM(M... tablesell" />
+                <marker date="1525360183486" expanded="true" signature="26632:26703" ph="SELECT Mseri... tablecritical" />
+                <marker date="1525360183486" expanded="true" signature="27017:27253" ph="UPDATE tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="27514:27749" ph="UPDATE tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="28061:28293" ph="UPDATE tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="28554:28787" ph="UPDATE tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="29071:29232" ph="INSERT INTO tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="32016:32060" ph="SELECT * FRO... tablecritical" />
+                <marker date="1525360183486" expanded="true" signature="52331:52348" ph="DELETE FROM store... " />
+                <marker date="1525360183486" expanded="true" signature="52400:52425" ph="DELETE FROM tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="52477:52498" ph="DELETE FROM tablesell... " />
+                <marker date="1525360183486" expanded="true" signature="52550:52574" ph="DELETE FROM tablestockin... " />
+                <marker date="1525360183486" expanded="true" signature="55541:55604" ph="DELETE FROM store... " />
+                <marker date="1525360183486" expanded="true" signature="55656:55727" ph="DELETE FROM tablecritical... " />
+                <marker date="1525360183486" expanded="true" signature="55779:55846" ph="DELETE FROM tablesell... " />
+                <marker date="1525360183486" expanded="true" signature="55898:55968" ph="DELETE FROM tablestockin... " />
+                <marker date="1525360183486" expanded="true" signature="56623:56770" ph="INSERT INTO pastrecords... " />
               </folding>
             </state>
           </provider>
@@ -151,7 +106,7 @@
       <file leaf-file-name="SellingDrug.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/selling/SellingDrug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="1426">
               <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="14" />
               <folding>
                 <element signature="method#upload#0;class#SellingDrug#0" expanded="false" />
@@ -178,10 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sections.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sections.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/login/Sections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
+            <state relative-caret-position="9545">
               <caret line="435" column="12" lean-forward="false" selection-start-line="435" selection-start-column="12" selection-end-line="435" selection-end-column="12" />
               <folding>
                 <marker date="1524229708306" expanded="true" signature="4696:4721" ph="SELECT Syste... systemtimer" />
@@ -193,7 +148,7 @@
       <file leaf-file-name="SellAnalysis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sellingstore/SellAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="1035">
               <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding>
                 <marker date="1524214732525" expanded="true" signature="3383:3481" ph="SELECT Mseri... tablesell" />
@@ -216,7 +171,7 @@
       <file leaf-file-name="MedicineStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/MedicineStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="20309">
               <caret line="899" column="49" lean-forward="false" selection-start-line="899" selection-start-column="49" selection-end-line="899" selection-end-column="49" />
               <folding>
                 <marker date="1524214732103" expanded="true" signature="4839:4969" ph="SELECT Medat... store" />
@@ -237,7 +192,7 @@
       <file leaf-file-name="Worker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/membership/Worker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="1380">
               <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding>
                 <marker date="1524214731853" expanded="true" signature="4926:4989" ph="SELECT * FRO... userlogin" />
@@ -276,7 +231,7 @@
       <file leaf-file-name="AddMedicine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ordering/AddMedicine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
+            <state relative-caret-position="1472">
               <caret line="81" column="14" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="14" />
               <folding>
                 <marker date="1524214732150" expanded="true" signature="6325:6418" ph="INSERT INTO tablestockin... " />
@@ -353,13 +308,11 @@
         <option value="$PROJECT_DIR$/src/TestOnlineConnection.java" />
         <option value="$PROJECT_DIR$/src/SystemTimer/timer.txt" />
         <option value="$PROJECT_DIR$/src/analysis/AnalysisType.java" />
-        <option value="$PROJECT_DIR$/src/login/Welcome.java" />
         <option value="$PROJECT_DIR$/src/dbconnector/DBConnector.java" />
         <option value="$PROJECT_DIR$/src/login/Login.java" />
         <option value="$PROJECT_DIR$/src/login/Reseting.java" />
         <option value="$PROJECT_DIR$/src/analysis/Archives.java" />
         <option value="$PROJECT_DIR$/src/analysis/SoldRecords.java" />
-        <option value="$PROJECT_DIR$/src/analysis/StockAnalysis.java" />
         <option value="$PROJECT_DIR$/src/analysis/SuppliersAnalysis.java" />
         <option value="$PROJECT_DIR$/src/membership/Worker.java" />
         <option value="$PROJECT_DIR$/src/ordering/AddMedicine.java" />
@@ -367,6 +320,8 @@
         <option value="$PROJECT_DIR$/src/sellingstore/SellAnalysis.java" />
         <option value="$PROJECT_DIR$/src/store/MedicineStore.java" />
         <option value="$PROJECT_DIR$/src/login/Sections.java" />
+        <option value="$PROJECT_DIR$/src/analysis/StockAnalysis.java" />
+        <option value="$PROJECT_DIR$/src/login/Welcome.java" />
       </list>
     </option>
   </component>
@@ -460,6 +415,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -529,9 +487,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -795,12 +750,14 @@
       <workItem from="1523652078765" duration="826000" />
       <workItem from="1524041520194" duration="76000" />
       <workItem from="1524041616590" duration="4867000" />
-      <workItem from="1524213028610" duration="4234000" />
+      <workItem from="1524213028610" duration="4929000" />
+      <workItem from="1524405964331" duration="1273000" />
+      <workItem from="1525357207137" duration="2771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283818000" />
+    <option name="totallyTimeSpent" value="288557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,25 +774,25 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.579288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7022654" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5787728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70149255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1066,19 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Welcome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="65" column="25" lean-forward="true" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-          <folding>
-            <marker date="1524214732244" expanded="true" signature="16490:16558" ph="INSERT INTO systemtimer... " />
-            <marker date="1524214732244" expanded="true" signature="16811:16940" ph="UPDATE systemtimer... " />
-            <marker date="1524214732244" expanded="true" signature="17557:17582" ph="SELECT Medat... storeWHERE" />
-            <marker date="1524214732244" expanded="true" signature="17557:17595" ph="SELECT * FRO... systemtimer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dbconnector/DBConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1151,7 +1095,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/analysis/SoldRecords.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="966">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <marker date="1524214731994" expanded="true" signature="3248:3309" ph="DELETE FROM pastsoldrecords... " />
@@ -1167,69 +1111,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/analysis/StockAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="14" />
-          <folding>
-            <marker date="1524214731963" expanded="true" signature="3880:3943" ph="SELECT * FRO... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="4186:4367" ph="INSERT INTO pastsoldrecords... " />
-            <marker date="1524214731963" expanded="true" signature="7775:7802" ph="SELECT * FRO... tablecritical" />
-            <marker date="1524214731963" expanded="true" signature="14458:14514" ph="SELECT SUM(M... tablestockin" />
-            <marker date="1524214731963" expanded="true" signature="14839:14895" ph="SELECT SUM(M... tablestockin" />
-            <marker date="1524214731963" expanded="true" signature="15171:15224" ph="SELECT SUM(M... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="15566:15614" ph="SELECT SUM(M... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="15977:16026" ph="SELECT SUM(P... tabledistributers" />
-            <marker date="1524214731963" expanded="true" signature="16314:16355" ph="SELECT SUM(P... userlogin" />
-            <marker date="1524214731963" expanded="true" signature="16645:16689" ph="SELECT SUM(P... adminlogin" />
-            <marker date="1524214731963" expanded="true" signature="16968:17012" ph="SELECT SUM(T... tablestockin" />
-            <marker date="1524214731963" expanded="true" signature="17277:17319" ph="SELECT SUM(T... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="19970:20097" ph="SELECT * FRO... tablecritical" />
-            <marker date="1524214731963" expanded="true" signature="23771:23798" ph="SELECT * FRO... tablestockin" />
-            <marker date="1524214731963" expanded="true" signature="24599:24690" ph="SELECT SUM(M... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="25006:25091" ph="SELECT SUM(T... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="25440:25526" ph="SELECT SUM(M... tablesell" />
-            <marker date="1524214731963" expanded="true" signature="26195:26266" ph="SELECT Mseri... tablecritical" />
-            <marker date="1524214731963" expanded="true" signature="26580:26816" ph="UPDATE tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="27077:27312" ph="UPDATE tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="27624:27856" ph="UPDATE tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="28117:28350" ph="UPDATE tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="28634:28795" ph="INSERT INTO tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="31579:31623" ph="SELECT * FRO... tablecritical" />
-            <marker date="1524214731963" expanded="true" signature="51894:51911" ph="DELETE FROM store... " />
-            <marker date="1524214731963" expanded="true" signature="51963:51988" ph="DELETE FROM tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="52040:52061" ph="DELETE FROM tablesell... " />
-            <marker date="1524214731963" expanded="true" signature="52113:52137" ph="DELETE FROM tablestockin... " />
-            <marker date="1524214731963" expanded="true" signature="55104:55167" ph="DELETE FROM store... " />
-            <marker date="1524214731963" expanded="true" signature="55219:55290" ph="DELETE FROM tablecritical... " />
-            <marker date="1524214731963" expanded="true" signature="55342:55409" ph="DELETE FROM tablesell... " />
-            <marker date="1524214731963" expanded="true" signature="55461:55531" ph="DELETE FROM tablestockin... " />
-            <marker date="1524214731963" expanded="true" signature="56186:56333" ph="INSERT INTO pastrecords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/analysis/SuppliersAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-          <folding>
-            <marker date="1524214732057" expanded="true" signature="5110:5186" ph="SELECT * FRO... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="6564:6616" ph="SELECT SUM(M... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="6923:6968" ph="SELECT SUM(P... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="7270:7317" ph="SELECT SUM(B... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="8380:8550" ph="SELECT * FRO... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="11553:11601" ph="SELECT * FRO... tabledistributers" />
-            <marker date="1524214732057" expanded="true" signature="14927:15088" ph="UPDATE tabledistributers... " />
-            <marker date="1524214732057" expanded="true" signature="15328:15432" ph="INSERT INTO paymentrecords... " />
-            <marker date="1524214732057" expanded="true" signature="30237:30310" ph="DELETE FROM tabledistributers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/membership/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="1380">
           <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
           <folding>
             <marker date="1524214731853" expanded="true" signature="4926:4989" ph="SELECT * FRO... userlogin" />
@@ -1266,7 +1150,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ordering/AddMedicine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="1472">
           <caret line="81" column="14" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="14" />
           <folding>
             <marker date="1524214732150" expanded="true" signature="6325:6418" ph="INSERT INTO tablestockin... " />
@@ -1278,7 +1162,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/selling/SellingDrug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="1426">
           <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="14" />
           <folding>
             <element signature="method#upload#0;class#SellingDrug#0" expanded="false" />
@@ -1306,7 +1190,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sellingstore/SellAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="1035">
           <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
           <folding>
             <marker date="1524214732525" expanded="true" signature="3383:3481" ph="SELECT Mseri... tablesell" />
@@ -1327,7 +1211,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/MedicineStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="20309">
           <caret line="899" column="49" lean-forward="false" selection-start-line="899" selection-start-column="49" selection-end-line="899" selection-end-column="49" />
           <folding>
             <marker date="1524214732103" expanded="true" signature="4839:4969" ph="SELECT Medat... store" />
@@ -1346,10 +1230,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/login/Sections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="9545">
           <caret line="435" column="12" lean-forward="false" selection-start-line="435" selection-start-column="12" selection-end-line="435" selection-end-column="12" />
           <folding>
             <marker date="1524229708306" expanded="true" signature="4696:4721" ph="SELECT Syste... systemtimer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analysis/SuppliersAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding>
+            <marker date="1524214732057" expanded="true" signature="5110:5186" ph="SELECT * FRO... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="6564:6616" ph="SELECT SUM(M... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="6923:6968" ph="SELECT SUM(P... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="7270:7317" ph="SELECT SUM(B... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="8380:8550" ph="SELECT * FRO... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="11553:11601" ph="SELECT * FRO... tabledistributers" />
+            <marker date="1524214732057" expanded="true" signature="14927:15088" ph="UPDATE tabledistributers... " />
+            <marker date="1524214732057" expanded="true" signature="15328:15432" ph="INSERT INTO paymentrecords... " />
+            <marker date="1524214732057" expanded="true" signature="30237:30310" ph="DELETE FROM tabledistributers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analysis/StockAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12849">
+          <caret line="132" column="79" lean-forward="false" selection-start-line="132" selection-start-column="79" selection-end-line="132" selection-end-column="79" />
+          <folding>
+            <element signature="method#anaylzeData#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#reAnalyzeData#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#setFieldsEmpty#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#setNull#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#tablecont#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#storeanalyzer#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#searchengine#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#analyzingdata#0;class#StockAnalysis#0" expanded="false" />
+            <element signature="method#uplaod#0;class#StockAnalysis#0" expanded="false" />
+            <marker date="1525360183486" expanded="true" signature="3880:3947" ph="SELECT * FRO... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="3985:4048" ph="SELECT * FRO... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="4388:4569" ph="INSERT INTO pastsoldrecords... " />
+            <marker date="1525360183486" expanded="true" signature="8211:8238" ph="SELECT * FRO... tablecritical" />
+            <marker date="1525360183486" expanded="true" signature="14894:14950" ph="SELECT SUM(M... tablestockin" />
+            <marker date="1525360183486" expanded="true" signature="15275:15331" ph="SELECT SUM(M... tablestockin" />
+            <marker date="1525360183486" expanded="true" signature="15607:15660" ph="SELECT SUM(M... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="16002:16050" ph="SELECT SUM(M... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="16413:16462" ph="SELECT SUM(P... tabledistributers" />
+            <marker date="1525360183486" expanded="true" signature="16750:16791" ph="SELECT SUM(P... userlogin" />
+            <marker date="1525360183486" expanded="true" signature="17081:17125" ph="SELECT SUM(P... adminlogin" />
+            <marker date="1525360183486" expanded="true" signature="17404:17448" ph="SELECT SUM(T... tablestockin" />
+            <marker date="1525360183486" expanded="true" signature="17713:17755" ph="SELECT SUM(T... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="20406:20533" ph="SELECT * FRO... tablecritical" />
+            <marker date="1525360183486" expanded="true" signature="24208:24235" ph="SELECT * FRO... tablestockin" />
+            <marker date="1525360183486" expanded="true" signature="25036:25127" ph="SELECT SUM(M... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="25443:25528" ph="SELECT SUM(T... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="25877:25963" ph="SELECT SUM(M... tablesell" />
+            <marker date="1525360183486" expanded="true" signature="26632:26703" ph="SELECT Mseri... tablecritical" />
+            <marker date="1525360183486" expanded="true" signature="27017:27253" ph="UPDATE tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="27514:27749" ph="UPDATE tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="28061:28293" ph="UPDATE tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="28554:28787" ph="UPDATE tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="29071:29232" ph="INSERT INTO tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="32016:32060" ph="SELECT * FRO... tablecritical" />
+            <marker date="1525360183486" expanded="true" signature="52331:52348" ph="DELETE FROM store... " />
+            <marker date="1525360183486" expanded="true" signature="52400:52425" ph="DELETE FROM tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="52477:52498" ph="DELETE FROM tablesell... " />
+            <marker date="1525360183486" expanded="true" signature="52550:52574" ph="DELETE FROM tablestockin... " />
+            <marker date="1525360183486" expanded="true" signature="55541:55604" ph="DELETE FROM store... " />
+            <marker date="1525360183486" expanded="true" signature="55656:55727" ph="DELETE FROM tablecritical... " />
+            <marker date="1525360183486" expanded="true" signature="55779:55846" ph="DELETE FROM tablesell... " />
+            <marker date="1525360183486" expanded="true" signature="55898:55968" ph="DELETE FROM tablestockin... " />
+            <marker date="1525360183486" expanded="true" signature="56623:56770" ph="INSERT INTO pastrecords... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Welcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="539" column="7" lean-forward="true" selection-start-line="539" selection-start-column="7" selection-end-line="539" selection-end-column="7" />
+          <folding>
+            <marker date="1525361079265" expanded="true" signature="16490:16558" ph="INSERT INTO systemtimer... " />
+            <marker date="1525361079265" expanded="true" signature="16811:16940" ph="UPDATE systemtimer... " />
+            <marker date="1525361079265" expanded="true" signature="17557:17582" ph="SELECT Medat... storeWHERE" />
+            <marker date="1525361079265" expanded="true" signature="17557:17595" ph="SELECT * FRO... systemtimer" />
           </folding>
         </state>
       </provider>

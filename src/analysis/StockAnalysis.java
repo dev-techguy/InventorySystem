@@ -98,42 +98,45 @@ public class StockAnalysis extends Component {
     private void saveSoldRecords(String productSerial) {
         try {
             con = DBConnector.getConnection();
+            String checkRecords = "SELECT * FROM tablecritical WHERE Mserial = '" + productSerial + "'";
             String fetchRecords = "SELECT * FROM tablesell WHERE Mserial = '" + productSerial + "'";
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            rs = stmt.executeQuery(fetchRecords);
-            if (rs.next()) {
-                do {
-                    String sqladd = "INSERT INTO pastsoldrecords(Mname,Mserial,Mtotalquantity,Bcost,Mcost,TotalTax,Tamount,Mtotalcost,CashPaid,ChangePaid,Msolddate,LastEdited,Invoice) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-                    prs = con.prepareStatement(sqladd);
+            rs2 = stmt.executeQuery(checkRecords);
 
-                    //setting to database
-                    prs.setString(1, rs.getString("Mname"));
-                    prs.setString(2, productSerial);
-                    prs.setDouble(3, rs.getDouble("Mtotalquantity"));
-                    prs.setDouble(4, rs.getDouble("Bcost"));
-                    prs.setDouble(5, rs.getDouble("Mcost"));
-                    prs.setDouble(6, rs.getDouble("TotalTax"));
-                    prs.setDouble(7, rs.getDouble("Tamount"));
-                    prs.setDouble(8, rs.getDouble("Mtotalcost"));
-                    prs.setDouble(9, rs.getDouble("CashPaid"));
-                    prs.setDouble(10, rs.getDouble("ChangePaid"));
-                    prs.setString(11, rs.getString("Msolddate"));
-                    prs.setString(12, rs.getString("LastEdited"));
-                    prs.setString(13, rs.getString("Invoice"));
+            if(rs2.next()){
+                rs = stmt.executeQuery(fetchRecords);
+                if (rs.next()) {
+                    do {
+                        String sqlsave = "INSERT INTO pastsoldrecords(Mname,Mserial,Mtotalquantity,Bcost,Mcost,TotalTax,Tamount,Mtotalcost,CashPaid,ChangePaid,Msolddate,LastEdited,Invoice) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        prs = con.prepareStatement(sqlsave);
 
-                    prs.execute();
+                        //setting to database
+                        prs.setString(1, rs.getString("Mname"));
+                        prs.setString(2, productSerial);
+                        prs.setDouble(3, rs.getDouble("Mtotalquantity"));
+                        prs.setDouble(4, rs.getDouble("Bcost"));
+                        prs.setDouble(5, rs.getDouble("Mcost"));
+                        prs.setDouble(6, rs.getDouble("TotalTax"));
+                        prs.setDouble(7, rs.getDouble("Tamount"));
+                        prs.setDouble(8, rs.getDouble("Mtotalcost"));
+                        prs.setDouble(9, rs.getDouble("CashPaid"));
+                        prs.setDouble(10, rs.getDouble("ChangePaid"));
+                        prs.setString(11, rs.getString("Msolddate"));
+                        prs.setString(12, rs.getString("LastEdited"));
+                        prs.setString(13, rs.getString("Invoice"));
 
-                } while (rs.next());
-                con.close();
-                stmt.close();
-                rs.close();
-                prs.close();
-            } else {
-                con.close();
-                stmt.close();
-                rs.close();
-                prs.close();
+                        prs.execute();
+
+                    } while (rs.next());
+                } else {
+                    Toolkit.getDefaultToolkit().beep();
+                    JOptionPane.showMessageDialog(null, "No Sold Records Found.", "Notification", JOptionPane.WARNING_MESSAGE);
+                }
+            }else {
+                Toolkit.getDefaultToolkit().beep();
+                JOptionPane.showMessageDialog(null, "No Such Product.", "Notification", JOptionPane.WARNING_MESSAGE);
             }
+
         } catch (SQLException e) {
             xamppfailure.getCon();
         }
@@ -525,7 +528,7 @@ public class StockAnalysis extends Component {
     }
 
     //metod for analysing data and analyzing data for a single stock
-    public void analyzingdata() {
+    private void analyzingdata() {
         try {
             con = DBConnector.getConnection();
             String fetchserial = "SELECT * FROM  tablestockin";
